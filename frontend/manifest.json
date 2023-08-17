@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Rentbusters",
+  "version": "1.0",
+  "description": "Display rentbusters on funda.nl",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://www.funda.nl/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": ["storage", "activeTab", "webNavigation"]
+}
